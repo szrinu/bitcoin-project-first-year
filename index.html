@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Price Prediction Upload Csv Data</title>
+    <style>
+        body {
+            background-image: url('https://images5.alphacoders.com/915/915234.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #35e609;
+        }
+        header {
+            background-color: #33333318;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header img {
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 50px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            color: #f2dc16;
+            margin-top: 2rem;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.525);
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        form {
+            display: inline-block;
+            margin-top: 2rem;
+        }
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #dfcfcf;
+        }
+        input[type="file"] {
+            margin-bottom: 1rem;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        body1 {
+            background-image: url('https://images5.alphacoders.com/915/915234.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Upload Bitcoin Data for Price Prediction</h1>
+    </header>
+    <div>
+        <form action="/predict" methods="POST" enctype="multipart/form-data">
+            <!-- Corrected name attribute to match what you're accessing in Flask -->
+            <input type="file" name="input_data" accept=".csv" required>
+            <p id="file-size">File size: </p>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <script>
+        const fileInput = document.querySelector('input[type="file"]');
+        const fileSizeElement = document.getElementById('file-size');
+        
+        fileInput.addEventListener('change', () => {
+            const fileSize = fileInput.files[0].size;
+            fileSizeElement.textContent = `File size: ${fileSize} bytes`;
+        });
+    </script>
+    <body1>
+    <div class="content">
+        <h2>Machine Learning Techniques</h2>
+        <p>
+            This web application uses various machine learning techniques to predict Bitcoin prices. Some of these techniques include ARIMA, LSTM, and Logistic Regression.
+        </p>
+        <h2>ARIMA</h2>
+        <p>
+            ARIMA (AutoRegressive Integrated Moving Average) is a popular forecasting technique used for time series data. It uses historical data to model trends and patterns, making it suitable for Bitcoin price prediction.
+        </p>
+        <h2>LSTM</h2>
+        <p>
+            Long Short-Term Memory (LSTM) is a type of Recurrent Neural Network (RNN) designed to handle sequential data like time series. It can learn long-term dependencies in the data, making it effective for Bitcoin price prediction.
+        </p>
+        <h2>Logistic Regression</h2>
+        <p>
+            Logistic Regression is a simple yet powerful machine learning technique often used for binary classification. In the context of Bitcoin price prediction, it can be used to predict whether the price will go up or down based on historical data.
+        </p>
+        <h2>Confusion Matrix</h2>
+        <p>
+            A confusion matrix is a table that summarizes the performance of a classification model.
+        </p>
+    </div>
+</body>
+</html>
